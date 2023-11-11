@@ -1,5 +1,6 @@
 package me.mrstick.nations.scripts;
 
+import me.mrstick.nations.scripts.Configs.Config;
 import me.mrstick.nations.scripts.LocalDatabase.LocalDatabase;
 
 import java.io.File;
@@ -16,10 +17,26 @@ public class DataFileCreation {
         }
 
         // Creates Config.yaml file
-        File config = new File(folder, "config.yaml");
+        File config = new File(folder, "config.yml");
         if (!config.exists()) {
             try {
+
                 config.createNewFile();
+                Config configFile = new Config();
+                configFile.copyDefaultConfig(config, "config.yml");
+
+            } catch (IOException c) {
+                c.printStackTrace();
+            }
+        }
+
+        // Creates Messages.yml file
+        File messages = new File(folder, "messages.yml");
+        if (!messages.exists()) {
+            try {
+                messages.createNewFile();
+                Config msgFile = new Config();
+                msgFile.copyDefaultConfig(messages, "messages.yml");
             } catch (IOException c) {
                 c.printStackTrace();
             }
@@ -41,7 +58,7 @@ public class DataFileCreation {
             }
 
             LocalDatabase db = new LocalDatabase(database.getAbsolutePath());
-            db.POST("CREATE TABLE IF NOT EXISTS players (uuid TEXT PRIMARY KEY, username TEXT)");
+            db.POST("CREATE TABLE IF NOT EXISTS players (uuid TEXT PRIMARY KEY, username TEXT, nation TEXT)");
         }
 
     }

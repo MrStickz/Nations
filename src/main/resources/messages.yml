@@ -1,0 +1,31 @@
+#####         #####           #####        ##############    ###############     ############    #####         #####
+ ### ##        ###           #######       ##   ###    ##    ##    ###    ##    ###        ###    ### ##        ###
+ ###  ##       ###          ###   ###           ###                ###          ##          ##    ###  ##       ###
+ ###    ##     ###         ###     ###          ###                ###          ##          ##    ###    ##     ###
+ ###     ##    ###        ###       ###         ###                ###          ##          ##    ###     ##    ###
+ ###      ##   ###       ###############        ###                ###          ##          ##    ###      ##   ###
+ ###       ##  ###      ###           ###       ###                ###          ##          ##    ###       ##  ###
+ ###        ## ###     ###             ###      ###          ##    ###    ##    ###        ###    ###        ## ###
+#####         #####   #####           #####     ###          ###############     ############    #####         #####
+
+####################################################################################################################
+
+# ALL THE CONFIGURATION RELATED TO NATIONS PLUGIN MESSAGES SETTINGS ARE HERE!
+
+# IMPORTANT!
+# Some Rules that must be followed while configuring the file!
+#   - If a value is in quotes ('' <- These things) Do not Remove them!
+#   - Int value must be written in Integer form
+#   - Boolean value must be written in Boolean form
+
+####################################################################################################################
+#                                          MAIN CONFIGURATION STARTS
+
+# Main Prefix of the plugin
+prefix: "§f[§6Nations§f]"
+
+# Plugin Related
+start-message: "{prefix} Nations are Ready to Fight!"
+stop-message: "{prefix} Peace Out!"
+
+player-first-join: "§a•§f Welcome to §6Nations"

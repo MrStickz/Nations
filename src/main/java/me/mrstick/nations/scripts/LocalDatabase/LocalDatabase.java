@@ -37,4 +37,19 @@ public class LocalDatabase {
             throw  new RuntimeException(c);
         }
     }
+
+    public Boolean CHECK(String command, String value) {
+        try {
+            Class.forName("org.sqlite.JDBC");
+            connection = DriverManager.getConnection(dbPath);
+            Statement statement = connection.createStatement();
+
+            ResultSet resultSet = statement.executeQuery(command);
+            String result = resultSet.getString(value);
+
+            return result != null;
+        } catch (SQLException | ClassNotFoundException c) {
+            throw new RuntimeException(c);
+        }
+    }
 }
