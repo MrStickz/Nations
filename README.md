@@ -1,7 +1,6 @@
 # Nations [Beta]
 
 ![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=java&logoColor=white&logoWidth=40)
-![Kotlin](https://img.shields.io/badge/kotlin-%23FF5722.svg?style=for-the-badge&logo=kotlin&logoColor=white)
 ![Paper](https://img.shields.io/badge/paper-%23808080.svg?style=for-the-badge&logo=paper&logoColor=black)
 ![Discord](https://img.shields.io/discord/1149050814434914387?color=5865F2&label=Discord&logo=Discord&labelColor=23272a&style=for-the-badge)
 
