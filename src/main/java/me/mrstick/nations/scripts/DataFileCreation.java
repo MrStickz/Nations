@@ -58,9 +58,10 @@ public class DataFileCreation {
             }
 
             LocalDatabase db = new LocalDatabase(database.getAbsolutePath());
-            db.POST("CREATE TABLE IF NOT EXISTS players (uuid TEXT PRIMARY KEY, username TEXT, nation TEXT)");
+            db.POST("CREATE TABLE IF NOT EXISTS players (uuid TEXT PRIMARY KEY, username TEXT, nation TEXT, `nation-role` TEXT)");
+            db.POST("CREATE TABLE IF NOT EXISTS nations (name TEXT PRIMARY KEY, `display-name` TEXT, description TEXT, owner INT, players INT, wealth INT, level INT, chunks TEXT, roles TEXT)");
+            db.POST("CREATE TABLE IF NOT EXISTS subclaims (`area-name` TEXT PRIMARY KEY, nation TEXT, chunkkey TEXT, tax INT, `access-player` TEXT, `access-role` TEXT)");
         }
-
     }
 
 }

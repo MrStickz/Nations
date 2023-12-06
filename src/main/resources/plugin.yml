@@ -2,3 +2,7 @@ name: Nations
 version: '${project.version}'
 main: me.mrstick.nations.Nations
 api-version: '1.20'
+
+commands:
+  nation:
+    description: Nations command to manage all the plugin Stuff

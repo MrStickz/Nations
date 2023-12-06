@@ -25,13 +25,6 @@
                 <configuration>
                     <source>${java.version}</source>
                     <target>${java.version}</target>
-                    <annotationProcessorPaths>
-                        <path>
-                            <groupId>dev.jorel</groupId>
-                            <artifactId>commandapi-annotations</artifactId>
-                            <version>9.2.0</version>
-                        </path>
-                    </annotationProcessorPaths>
                 </configuration>
             </plugin>
             <plugin>
@@ -49,13 +42,6 @@
                 </executions>
                 <configuration>
                     <minimizeJar>true</minimizeJar>
-                    <relocations>
-                        <relocation>
-                            <pattern>dev.jorel.commandapi</pattern>
-                            <!-- TODO: Change this to my own package name -->
-                            <shadedPattern>my.custom.package.commandapi</shadedPattern>
-                        </relocation>
-                    </relocations>
                 </configuration>
             </plugin>
         </plugins>
@@ -75,6 +61,12 @@
         <repository>
             <id>sonatype</id>
             <url>https://oss.sonatype.org/content/groups/public/</url>
+        </repository>
+
+        <!--For Vault Api-->
+        <repository>
+            <id>jitpack.io</id>
+            <url>https://jitpack.io</url>
         </repository>
     </repositories>
 
@@ -100,15 +92,11 @@
 
         <!--API's-->
         <dependency>
-            <groupId>dev.jorel</groupId>
-            <artifactId>commandapi-bukkit-shade</artifactId>
-            <version>9.2.0</version>
-        </dependency>
-        <dependency>
-            <groupId>dev.jorel</groupId>
-            <artifactId>commandapi-annotations</artifactId>
-            <version>9.2.0</version>
+            <groupId>com.github.MilkBowl</groupId>
+            <artifactId>VaultAPI</artifactId>
+            <version>1.7</version>
             <scope>provided</scope>
         </dependency>
     </dependencies>
+
 </project>

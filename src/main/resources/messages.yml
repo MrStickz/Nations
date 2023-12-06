@@ -1,11 +1,11 @@
 #####         #####           #####        ##############    ###############     ############    #####         #####
- ### ##        ###           #######       ##   ###    ##    ##    ###    ##    ###        ###    ### ##        ###
- ###  ##       ###          ###   ###           ###                ###          ##          ##    ###  ##       ###
- ###    ##     ###         ###     ###          ###                ###          ##          ##    ###    ##     ###
- ###     ##    ###        ###       ###         ###                ###          ##          ##    ###     ##    ###
- ###      ##   ###       ###############        ###                ###          ##          ##    ###      ##   ###
- ###       ##  ###      ###           ###       ###                ###          ##          ##    ###       ##  ###
- ###        ## ###     ###             ###      ###          ##    ###    ##    ###        ###    ###        ## ###
+### ##        ###           #######       ##   ###    ##    ##    ###    ##    ###        ###    ### ##        ###
+###  ##       ###          ###   ###           ###                ###          ##          ##    ###  ##       ###
+###    ##     ###         ###     ###          ###                ###          ##          ##    ###    ##     ###
+###     ##    ###        ###       ###         ###                ###          ##          ##    ###     ##    ###
+###      ##   ###       ###############        ###                ###          ##          ##    ###      ##   ###
+###       ##  ###      ###           ###       ###                ###          ##          ##    ###       ##  ###
+###        ## ###     ###             ###      ###          ##    ###    ##    ###        ###    ###        ## ###
 #####         #####   #####           #####     ###          ###############     ############    #####         #####
 
 ####################################################################################################################
@@ -17,15 +17,48 @@
 #   - If a value is in quotes ('' <- These things) Do not Remove them!
 #   - Int value must be written in Integer form
 #   - Boolean value must be written in Boolean form
+#   - You cannot use placeholders on any line you want!
+#   - Available Placeholders {name}, {player}, {cost}
 
+# PlaceHolders
+# 1: {name}, {nation} Represents the name of the Nation
+# 2: {player} Represents the player executing or targeted using the command
+# 3: {cost} The cost/price of specifc thing
 ####################################################################################################################
 #                                          MAIN CONFIGURATION STARTS
 
 # Main Prefix of the plugin
 prefix: "§f[§6Nations§f]"
 
-# Plugin Related
-start-message: "{prefix} Nations are Ready to Fight!"
-stop-message: "{prefix} Peace Out!"
 
-player-first-join: "§a•§f Welcome to §6Nations"
+player-first-join: "§a§l◆§f Welcome to §6Nations"
+
+console-perms-error: "§c◆§c Only Players can execute this command"
+permission-error: "§c◆§c You do not have sufficient permission to use this command"
+
+# Usage of All the Commands
+create-nation: "§6◆§f /nation create <name> <display name>"
+delete-nation: "§6◆§f /nation delete <confirm>"
+rename-nation: "§6◆§f /nation rename <name>"
+change-nation: "§6◆§f /nation change <displayname/name> <name>"
+
+entered-nation: "§3{nation}"
+entered-nation-subtitle: "§7Nation of §f{player}"
+entered-wild: "§2Wild"
+entered-wild-subtitle: "§7Feel the Nature"
+
+insufficient-creationCost: "§c◆§c You atleast need §6{cost}§c coins to declare a Nation!"
+insufficient-renameCost: "§c◆§c You atleast need §6{cost}§c coins to rename your Nation!"
+
+broadcast-nation-creation: "§a◆§f Nation §8§l{name} §7§lis declared by §8§l{player}"
+nation-exists: "§c◆§c A Nation with this name already exists!"
+lot-players-nation: "§c◆§c There should be no Players in the nation to do this action!"
+land-already-claimed: "§c◆§c This land is claimed by {name}"
+
+already-own-nation: "§c◆§c You already own a Nation!"
+no-nation-own: "§c◆§c You do not own any Nation!"
+
+nation-deleted: "§a◆§f Successfully disbanded nation §6§l{nation}"
+nation-displayname-changed: "§a◆§f Display Name has been changed from §7§l{nation} to §7§l{name}"
+nation-renamed: "§a◆§f Nation §7§l{nation}§f has been retitled to §7§l{name}"
+nation-created: "§a◆§f You successfully declared §6{name}"

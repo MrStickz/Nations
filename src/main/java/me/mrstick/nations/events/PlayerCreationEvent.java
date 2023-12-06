@@ -1,7 +1,11 @@
 package me.mrstick.nations.events;
 
+import me.mrstick.nations.Api.Vault.Vault;
+import me.mrstick.nations.scripts.Configs.Config;
 import me.mrstick.nations.scripts.Configs.YamlReader;
 import me.mrstick.nations.scripts.LocalDatabase.LocalDatabase;
+import net.milkbowl.vault.economy.Economy;
+import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -25,9 +29,18 @@ public class PlayerCreationEvent implements Listener {
         UUID playerUUID = player.getUniqueId();
         String playerName = player.getName();
 
-        String command = "INSERT INTO players VALUES ('" + playerUUID + "', '" + playerName + "', '')";
+        Config conf = new Config();
+        FileConfiguration config = conf.loadConfig("plugins/Nations/config.yml");
+
+        int startBal = config.getInt("economy.start-bal");
+
+        String command = "INSERT INTO players VALUES ('" + playerUUID + "', '" + playerName + "', '', '')";
         db.POST(command);
 
+        Economy economy = Vault.getEconomy();
+        economy.depositPlayer(player, startBal);
+
+        // Sending First Join Message
         YamlReader reader = new YamlReader();
         String welcomeMsg = reader.ReadMsg("player-first-join");
         player.sendMessage(welcomeMsg);

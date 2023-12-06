@@ -17,8 +17,34 @@
 #   - If a value is in quotes ('' <- These things) Do not Remove them!
 #   - Int value must be written in Integer form
 #   - Boolean value must be written in Boolean form
+#   - You cannot use placeholders on any line you want!
 
 ####################################################################################################################
 #                                          MAIN CONFIGURATION STARTS
 
 
+economy:
+  start-bal: 0
+
+nation:
+  creation-cost: 1000
+  rename-cost: 500
+
+  # Blocks that are not allowed to be interacted inside a Claim (Mainly Containers)
+  Interaction-Blocks:
+   - CHEST
+   - ENDER_CHEST
+   - FURNACE
+   - DISPENSER
+   - DROPPER
+   - HOPPER
+   - BREWING_STAND
+   - ANVIL
+   - BEACON
+   - SMOKER
+   - BLAST_FURNACE
+   - CARTOGRAPHY_TABLE
+   - GRINDSTONE
+   - LECTERN
+   - LOOM
+   - STONECUTTER
