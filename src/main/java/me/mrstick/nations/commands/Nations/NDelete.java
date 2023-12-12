@@ -26,14 +26,14 @@ public class NDelete implements CommandInterface {
             return false;
         }
         if (args.length < 2) {
-            sender.sendMessage(reader.ReadMsg("delete-nation"));
+            sender.sendMessage(reader.ReadMsg("abandon-nation"));
             return false;
         }
 
         String confirm = args[1];
 
         if (!confirm.equalsIgnoreCase("confirm")) {
-            sender.sendMessage(reader.ReadMsg("nation-deletion-help"));
+            sender.sendMessage(reader.ReadMsg("abandon-nation"));
             return false;
         }
 
@@ -54,7 +54,7 @@ public class NDelete implements CommandInterface {
         String nName = db.GET("SELECT * FROM nations WHERE owner='"+pUUID+"'", "name");
         db.POST("DELETE FROM nations WHERE name='"+nName+"'");
 
-        String successMsg = reader.ReadMsg("nation-deleted");
+        String successMsg = reader.ReadMsg("nation-abandoned");
         player.sendMessage(reader.convNation(successMsg, nName));
 
         return false;

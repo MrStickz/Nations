@@ -20,12 +20,12 @@ Before Nations was a multi language plugin which use's Kotlin for scripting and 
 ### Addition
 Currently as the plugin is in beta development, theres lots of things that are going to be added
 - [x] Character Creation
-- [ ] Nations Creation
+- [x] Nations Creation
 - [ ] Declaring Wars
 - [ ] Land Claiming
 - [ ] Weapons Addition
 - [ ] Jobs
-- [ ] Economy System
+- [x] Economy System
 - [ ] Banking System
 - [ ] Citizens Support for Additional stuff
 - [x] Vault Support for Economy, PlaceHolders and more

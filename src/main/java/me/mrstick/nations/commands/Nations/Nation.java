@@ -15,8 +15,9 @@ public class Nation implements CommandInterface {
                 §7• §6Nations §7- §f[§e/nation§f]
                 §7• §e/nation §7- §fShows all the commands
                 §7• §e/nation create §7- §fDeclare your own Nation
-                §7• §e/nation delete §7- §fDelete your Nation
+                §7• §e/nation abandon §7- §fDelete/Abandon your Nation
                 §7• §e/nation change §7- §fEdit info about your Nation
+                §7• §e/nation claim §7- §fClaim's the Chunk you standing on
                 §8-----------------------------------
                 """;
         sender.sendMessage(help);

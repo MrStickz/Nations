@@ -12,8 +12,9 @@ public class NationsHandler extends CommandHandler {
     public NationsHandler() {
         register("", new Nation());
         register("create", new NCreate());
-        register("delete", new NDelete());
+        register("abandon", new NDelete());
         register("change", new NChange());
+        register("claim", new NClaim());
     }
 
     @Override

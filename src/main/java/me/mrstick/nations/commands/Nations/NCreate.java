@@ -69,7 +69,7 @@ public class NCreate implements CommandInterface {
         if (claimCheck != null) {
             String dName = db.GET("SELECT * FROM nations WHERE name='"+claimCheck+"'", "display-name");
             String errMsg = reader.ReadMsg("land-already-claimed");
-            player.sendMessage(reader.convName(errMsg, dName));
+            player.sendMessage(reader.convNation(errMsg, dName));
             return false;
         }
 

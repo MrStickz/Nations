@@ -29,6 +29,7 @@ economy:
 nation:
   creation-cost: 1000
   rename-cost: 500
+  chunk-claim-cost: 500
 
   # Blocks that are not allowed to be interacted inside a Claim (Mainly Containers)
   Interaction-Blocks:
